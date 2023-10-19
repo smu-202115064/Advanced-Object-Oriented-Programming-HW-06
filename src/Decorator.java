@@ -13,4 +13,15 @@ abstract class Decorator extends AbstractPizza {
     public int getSize() {
         return pizza.getSize();
     }
+
+    public String getName() {
+        return getDecoratorName() + " " + pizza.getName();
+    }
+
+    public int getPrice() {
+        return getDecoratorPrice() + pizza.getPrice();
+    }
+
+    public abstract String getDecoratorName();
+    public abstract int getDecoratorPrice();
 }

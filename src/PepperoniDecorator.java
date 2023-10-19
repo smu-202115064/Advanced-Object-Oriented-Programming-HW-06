@@ -3,11 +3,11 @@ public class PepperoniDecorator extends Decorator {
         super(pizza);
     }
 
-    public String getName() {
-        return "페퍼로니 " + getPizza().getName();
+    public String getDecoratorName() {
+        return "페퍼로니";
     }
 
-    public int getPrice() {
-        return ToppingsPrice.PEPPERONI + getPizza().getPrice();
+    public int getDecoratorPrice() {
+        return ToppingsPrice.PEPPERONI;
     }
 }

@@ -3,11 +3,11 @@ public class BulgogiDecorator extends Decorator {
         super(pizza);
     }
 
-    public String getName() {
-        return "불고기 " + getPizza().getName();
+    public String getDecoratorName() {
+        return "불고기";
     }
 
-    public int getPrice() {
-        return ToppingsPrice.BULGOGI + getPizza().getPrice();
+    public int getDecoratorPrice() {
+        return ToppingsPrice.BULGOGI;
     }
 }
