@@ -1,4 +1,4 @@
-class Pizza {
+class Pizza extends AbstractPizza {
     private int size;
     private String name;
     private int price;

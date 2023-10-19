@@ -6,9 +6,14 @@ class MainUsingSelectToppingPizza {
         LoadToppings loadToppings = new LoadToppings("toppings.txt");
         list = loadToppings.load();
     
-        SelectToppingPizza pizza = new SelectToppingPizza(15);
+        AbstractPizza pizza = new Pizza(15);
         for (String topping : list) {
-            pizza.addTopping(topping);
+            if (topping.equals("Bulgogi")) {
+                pizza = new BulgogiDecorator(pizza);
+            }
+            else if (topping.equals("Pepperoni")) {
+                pizza = new PepperoniDecorator(pizza);
+            }
         }
         System.out.printf("피자: %s, 크기: %d, 가격: %d\n", pizza.getName(), pizza.getSize(), pizza.getPrice());
     }
